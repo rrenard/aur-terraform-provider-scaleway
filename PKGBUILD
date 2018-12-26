@@ -1,6 +1,6 @@
 pkgname=terraform-provider-scaleway
 pkgver=1.8.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Terraform Scaleway provider"
 url="https://github.com/terraform-providers/terraform-provider-scaleway"
 arch=("i686" "x86_64")
@@ -18,14 +18,14 @@ prepare() {
     mv -f "$pkgname-$pkgver" "$srcdir/src/$_gourl/$pkgname"
     msg2 "Fetching dependencies"
     cd "$srcdir/src/$_gourl/$pkgname"
-    GOPATH="$srcdir" go get -u github.com/hashicorp/terraform
+    GOPATH="$srcdir" GOBIN="$srcdir/bin" go get -u github.com/hashicorp/terraform
 }
 
 
 build() {
     msg2 "Build program"
     cd "$srcdir/src/$_gourl/$pkgname"
-    GOPATH="$srcdir" PATH="$srcdir/bin:$PATH" make 
+    GOPATH="$srcdir" GOBIN="$srcdir/bin" PATH="$srcdir/bin:$PATH" make
 }
 
 
