@@ -1,5 +1,5 @@
 pkgname=terraform-provider-scaleway
-pkgver=1.10.0
+pkgver=1.13.0
 pkgrel=1
 pkgdesc="Terraform Scaleway provider"
 url="https://github.com/terraform-providers/terraform-provider-scaleway"
@@ -9,7 +9,7 @@ makedepends=("go" "git")
 _gourl="github.com/terraform-providers"
 depends=('terraform')
 source=("https://github.com/terraform-providers/terraform-provider-scaleway/archive/v${pkgver}.tar.gz")
-sha256sums=('7b0b26c95430dbbe7e4088235b1801c5f2811b0bee32e6d5c0dc8c6907ccffa3')
+sha256sums=('b1cf86c0bd8c35e87f3b27e16f98df4b94e271b361fbde9f7737597841d5bc66')
 
 prepare() {
     mkdir -p "$srcdir/src/$_gourl"
@@ -17,7 +17,6 @@ prepare() {
     mv -f "$pkgname-$pkgver" "$srcdir/src/$_gourl/$pkgname"
     msg2 "Fetching dependencies"
     cd "$srcdir/src/$_gourl/$pkgname"
-    GOPATH="$srcdir" GOBIN="$srcdir/bin" go get -u github.com/hashicorp/terraform
 }
 
 
