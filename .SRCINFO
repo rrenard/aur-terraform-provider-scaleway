@@ -1,0 +1,16 @@
+pkgbase = terraform-provider-scaleway
+	pkgdesc = Terraform Scaleway provider
+	pkgver = 1.13.0
+	pkgrel = 1
+	url = https://github.com/terraform-providers/terraform-provider-scaleway
+	arch = i686
+	arch = x86_64
+	license = MPL2
+	makedepends = go
+	makedepends = git
+	depends = terraform
+	source = https://github.com/terraform-providers/terraform-provider-scaleway/archive/v1.13.0.tar.gz
+	sha256sums = b1cf86c0bd8c35e87f3b27e16f98df4b94e271b361fbde9f7737597841d5bc66
+
+pkgname = terraform-provider-scaleway
+
