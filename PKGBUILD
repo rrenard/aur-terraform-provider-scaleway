@@ -1,6 +1,6 @@
 pkgname=terraform-provider-scaleway
-pkgver=1.8.0
-pkgrel=2
+pkgver=1.10.0
+pkgrel=1
 pkgdesc="Terraform Scaleway provider"
 url="https://github.com/terraform-providers/terraform-provider-scaleway"
 arch=("i686" "x86_64")
@@ -9,8 +9,7 @@ makedepends=("go" "git")
 _gourl="github.com/terraform-providers"
 depends=('terraform')
 source=("https://github.com/terraform-providers/terraform-provider-scaleway/archive/v${pkgver}.tar.gz")
-sha256sums=('a3af9e7b7a57c2729fc2bb3440c6ded7091821d688cdd9e12e9533d61728d001')
-
+sha256sums=('7b0b26c95430dbbe7e4088235b1801c5f2811b0bee32e6d5c0dc8c6907ccffa3')
 
 prepare() {
     mkdir -p "$srcdir/src/$_gourl"
